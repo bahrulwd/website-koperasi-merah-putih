@@ -31,10 +31,17 @@
     scroll-behavior: smooth;
 }
 
+html {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     color: var(--text-dark);
+    overflow-x: hidden;
+    width: 100%;
     /* Latar belakang geometris halus agar glassmorphism terlihat */
     background: 
         radial-gradient(at 0% 0%, rgba(198, 40, 40, 0.1) 0px, transparent 50%),
@@ -63,6 +70,7 @@ ul {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .section-title {
@@ -86,6 +94,8 @@ ul {
 
 section {
     padding: var(--section-spacing) 0;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 /* --- Utility Classes for Glass & Animation --- */
@@ -338,6 +348,8 @@ header.scrolled .hamburger span {
 .hero-content {
     max-width: 800px;
     margin-top: 80px;
+    width: 100%;
+    padding: 0 20px;
 }
 
 .hero-title {
@@ -839,17 +851,54 @@ footer {
 
 /* Mobile - 768px and below */
 @media (max-width: 768px) {
-    section {
-        padding: 60px 20px;
+    * {
+        max-width: 100vw;
+    }
+
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    .container {
+        width: 100%;
+        padding: 0 20px;
+        max-width: 100%;
     }
 
     .hero {
-        padding: 100px 20px 80px;
-        min-height: 500px;
+        padding: 100px 0 80px;
+        min-height: 100vh;
+        width: 100%;
     }
 
     .hero-content {
         margin-top: 40px;
+        padding: 0 15px;
+        width: 100%;
+        max-width: 100%;
+    }
+    .container {
+        width: 100%;
+        padding: 0 20px;
+        max-width: 100%;
+    }
+
+    section {
+        padding: 60px 0;
+        width: 100%;
+    }
+
+    .hero {
+        padding: 100px 0 80px;
+        min-height: 100vh;
+        width: 100%;
+    }
+
+    .hero-content {
+        margin-top: 40px;
+        padding: 0 15px;
+        width: 100%;
     }
 
     /* Navbar Mobile */
@@ -961,6 +1010,8 @@ footer {
     .benefits-grid {
         grid-template-columns: 1fr;
         gap: 20px;
+        width: 100%;
+        max-width: 100%;
     }
 
     /* Cards Mobile */
@@ -968,6 +1019,8 @@ footer {
     .service-card,
     .management-card {
         padding: 30px 20px;
+        width: 100%;
+        max-width: 100%;
     }
 
     /* Contact Mobile */
@@ -994,19 +1047,22 @@ footer {
 @media (max-width: 480px) {
     .container {
         padding: 0 15px;
+        width: 100%;
     }
 
     section {
-        padding: 50px 15px;
+        padding: 50px 0;
+        width: 100%;
     }
 
     .hero {
-        padding: 80px 15px 60px;
-        min-height: 450px;
+        padding: 80px 0 60px;
+        min-height: 100vh;
     }
 
     .hero-content {
         margin-top: 30px;
+        padding: 0 10px;
     }
 
     .hero-title {
